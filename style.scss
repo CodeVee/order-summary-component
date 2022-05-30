@@ -1,0 +1,61 @@
+$white: hsl(0, 0%, 100%);
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+$font-redhat: 'Red Hat Display', sans-serif;
+$fw-500: 500;
+$fw-700: 700;
+$fw-900: 900;
+$fs-8s: 8.89px;
+$fs-10: 10px;
+$fs-11s: 11.04px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-redhat;
+}
+
+.page {
+    background: $very-pale-blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 45rem;
+    height: 69.7rem;
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: $fs-8s;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: $fs-11s;
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
