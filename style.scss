@@ -1,0 +1,235 @@
+$white: hsl(0, 0%, 100%);
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+$very-pale-blue: hsl(225, 100%, 98%);
+$desaturated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+$dark-shadow: hsla(228, 87%, 40%, 0.152);
+$blue-shadow: hsla(245, 75%, 52%, 0.19);
+$light-blue: hsla(245, 83%, 68%, 1);
+
+$font-redhat: 'Red Hat Display', sans-serif;
+$fw-500: 500;
+$fw-700: 700;
+$fw-900: 900;
+$fs-8s: 8.89px;
+$fs-10: 10px;
+$fs-11s: 11.04px;
+
+$mobile: 400px;
+$mobile-wide: 430px;
+$desktop: 1280px;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-size: $fs-10;
+    font-family: $font-redhat;
+}
+
+.page {
+    background: url(./images/pattern-background-desktop.svg) no-repeat top center fixed;
+    background-size: 100vw 46.3rem; 
+    background-color: $pale-blue;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 45rem;
+    height: 69.7rem;
+    background: $white;
+    border-radius: 2rem;
+    box-shadow: 0px 4rem 4rem -2rem $dark-shadow;
+
+    &__img {
+        height: 22rem;
+        img {
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+        }
+    }
+
+    &__summary {
+        height: calc(100% - 22rem);
+        padding: 4.5rem 4.8rem 4.8rem;
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 1.7rem;
+        color: $dark-blue;
+        font-weight: $fw-900;
+        font-size: 2.8rem;
+        line-height: 3.7rem;
+    }
+
+    &__text {
+        margin-bottom: 2rem;
+        font-weight: $fw-500;
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+        color: $desaturated-blue;
+    }
+
+    &__section {
+        margin-bottom: 3.2rem;
+        border-radius: 1.1rem;
+        background: $very-pale-blue;
+        height: 9.8rem;
+        padding: 2.5rem 2.4rem;
+        display: flex;
+        text-align: left;
+    }
+
+    &__icon {
+        width: 4.8rem;
+        height: 4.8rem;
+        margin-right: 2rem;
+    }
+
+    &__plan {
+        color: $dark-blue;
+        font-weight: $fw-900;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+        margin-bottom: .6rem;
+    }
+
+    &__price {
+        color: $desaturated-blue;
+        font-weight: $fw-500;
+        font-size: 1.6rem;
+        line-height: 2.1rem;
+    }
+
+    &__link {
+        margin-left: auto;
+        color: $bright-blue;
+        font-weight: $fw-700;
+        font-size: 1.4rem;
+        line-height: 1.9rem;
+        align-self: center;
+
+        &:hover {
+            color: $light-blue;
+            text-decoration: none;
+        }
+    }
+
+    &__btn {
+        width: 100%;
+        height: 5rem;
+        background: $bright-blue;
+        box-shadow: 0px 2rem 2rem $blue-shadow;
+        color: white;
+        border-radius: 1.1rem;
+        font-weight: $fw-900;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 4.7rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+
+        &:hover {
+            background: $light-blue;
+        }
+    }
+
+    &__cancel {
+        border: none;
+        outline: none;
+        background: transparent;
+        color: $desaturated-blue;
+        font-weight: $fw-900;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            color: $dark-blue;
+        }
+    }
+}
+
+@media screen and (max-width: $desktop) {
+    body, html {
+        font-size: $fs-8s;
+    }
+}
+
+@media screen and (max-width: $mobile-wide) {
+    body, html {
+        font-size: $fs-11s;
+    }
+
+    .page {
+        background: url(./images/pattern-background-mobile.svg) no-repeat top center fixed;
+        background-size: 100vw 19.4rem;
+    }
+    
+    .card {
+        width: 32.7rem;
+        height: 56.7rem;
+
+        &__img {
+            height: 16rem;
+        }
+    
+        &__summary {
+            height: calc(100% - 16rem);
+            padding: 3.2rem 2.4rem;
+        }
+    
+        &__header {
+            margin-bottom: 1.6rem;
+            font-size: 2.2rem;
+            line-height: 2.9rem;
+        }
+    
+        &__text {
+            margin-bottom: 2.4rem;
+            line-height: 2.5rem;
+        }
+    
+        &__section {
+            margin-bottom: 2.4rem;
+            height: 8.1rem;
+            padding: 1.7rem 1.6rem 1.6rem;
+        }
+    
+        &__plan {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            margin-bottom: .3rem;
+        }
+    
+        &__price {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+    
+        &__link {
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+        }
+    
+        &__btn {
+            margin-bottom: 2.4rem;
+        }
+    }
+}
+
+@media screen and (max-width: $mobile) {
+    body, html {
+        font-size: $fs-10;
+    }
+}
