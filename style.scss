@@ -35,7 +35,7 @@ body, html {
 .page {
     background: url(./images/pattern-background-desktop.svg) no-repeat top center fixed;
     background-size: 100vw 46.3rem; 
-    background-color: $very-pale-blue;
+    background-color: $pale-blue;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -86,6 +86,7 @@ body, html {
         height: 9.8rem;
         padding: 2.5rem 2.4rem;
         display: flex;
+        text-align: left;
     }
 
     &__icon {
@@ -107,7 +108,6 @@ body, html {
         font-weight: $fw-500;
         font-size: 1.6rem;
         line-height: 2.1rem;
-        text-align: left;
     }
 
     &__link {
@@ -169,6 +169,62 @@ body, html {
 @media screen and (max-width: $mobile-wide) {
     body, html {
         font-size: $fs-11s;
+    }
+
+    .page {
+        background: url(./images/pattern-background-mobile.svg) no-repeat top center fixed;
+        background-size: 100vw 19.4rem;
+    }
+    
+    .card {
+        width: 32.7rem;
+        height: 56.7rem;
+
+        &__img {
+            height: 16rem;
+        }
+    
+        &__summary {
+            height: calc(100% - 16rem);
+            padding: 3.2rem 2.4rem;
+        }
+    
+        &__header {
+            margin-bottom: 1.6rem;
+            font-size: 2.2rem;
+            line-height: 2.9rem;
+        }
+    
+        &__text {
+            margin-bottom: 2.4rem;
+            line-height: 2.5rem;
+        }
+    
+        &__section {
+            margin-bottom: 2.4rem;
+            height: 8.1rem;
+            padding: 1.7rem 1.6rem 1.6rem;
+        }
+    
+        &__plan {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            margin-bottom: .3rem;
+        }
+    
+        &__price {
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+        }
+    
+        &__link {
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+        }
+    
+        &__btn {
+            margin-bottom: 2.4rem;
+        }
     }
 }
 
