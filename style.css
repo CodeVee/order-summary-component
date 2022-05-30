@@ -10,16 +10,41 @@ body, html {
 }
 
 .page {
-  background: hsl(225deg, 100%, 98%);
+  background: url(./images/pattern-background-desktop.svg) no-repeat center center fixed;
+  background-size: cover;
+  background-color: hsl(225deg, 100%, 98%);
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 10.2rem 0;
 }
 
 .card {
   width: 45rem;
   height: 69.7rem;
+  background: hsl(0deg, 0%, 100%);
+  border-radius: 2rem;
+  box-shadow: 0px 4rem 4rem -2rem hsla(228deg, 87%, 40%, 0.152);
+}
+.card__img {
+  height: 22rem;
+}
+.card__img img {
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
+}
+.card__summary {
+  height: calc(100% - 22rem);
+  padding: 4.5rem 4.8rem 4.8rem;
+  text-align: center;
+}
+.card__header {
+  margin-bottom: 1.7rem;
+  color: hsl(223deg, 47%, 23%);
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 3.7rem;
 }
 
 @media screen and (max-width: 1280px) {

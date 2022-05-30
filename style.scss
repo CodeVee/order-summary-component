@@ -4,6 +4,7 @@ $bright-blue: hsl(245, 75%, 52%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
+$dark-shadow: hsla(228, 87%, 40%, 0.152);
 
 $font-redhat: 'Red Hat Display', sans-serif;
 $fw-500: 500;
@@ -30,16 +31,44 @@ body, html {
 }
 
 .page {
-    background: $very-pale-blue;
+    background: url(./images/pattern-background-desktop.svg) no-repeat center center fixed;
+    background-size: cover; 
+    background-color: $very-pale-blue;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10.2rem 0;
 }
 
 .card {
     width: 45rem;
     height: 69.7rem;
+    background: $white;
+    border-radius: 2rem;
+    box-shadow: 0px 4rem 4rem -2rem $dark-shadow;
+
+    &__img {
+        height: 22rem;
+        img {
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+        }
+    }
+
+    &__summary {
+        height: calc(100% - 22rem);
+        padding: 4.5rem 4.8rem 4.8rem;
+        text-align: center;
+    }
+
+    &__header {
+        margin-bottom: 1.7rem;
+        color: $dark-blue;
+        font-weight: $fw-900;
+        font-size: 2.8rem;
+        line-height: 3.7rem;
+    }
 }
 
 @media screen and (max-width: $desktop) {
