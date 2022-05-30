@@ -6,6 +6,7 @@ $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
 $dark-shadow: hsla(228, 87%, 40%, 0.152);
 $blue-shadow: hsla(245, 75%, 52%, 0.19);
+$light-blue: hsla(245, 83%, 68%, 1);
 
 $font-redhat: 'Red Hat Display', sans-serif;
 $fw-500: 500;
@@ -117,6 +118,11 @@ body, html {
         font-size: 1.4rem;
         line-height: 1.9rem;
         align-self: center;
+
+        &:hover {
+            color: $light-blue;
+            text-decoration: none;
+        }
     }
 
     &__btn {
@@ -133,6 +139,10 @@ body, html {
         border: none;
         outline: none;
         cursor: pointer;
+
+        &:hover {
+            background: $light-blue;
+        }
     }
 
     &__cancel {
@@ -144,6 +154,10 @@ body, html {
         font-size: 1.5rem;
         line-height: 2rem;
         cursor: pointer;
+
+        &:hover {
+            color: $dark-blue;
+        }
     }
 }
 
