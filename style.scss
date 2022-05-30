@@ -33,14 +33,13 @@ body, html {
 }
 
 .page {
-    background: url(./images/pattern-background-desktop.svg) no-repeat center center fixed;
-    background-size: cover; 
+    background: url(./images/pattern-background-desktop.svg) no-repeat top center fixed;
+    background-size: 100vw 46.3rem; 
     background-color: $very-pale-blue;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10.2rem 0;
 }
 
 .card {
